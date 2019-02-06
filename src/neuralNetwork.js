@@ -12,7 +12,7 @@ class NeuralNetwork {
         this.layers[i] = arg.layers[i].copy();
 
       // Connect layers
-      for (let i in this.layers)
+      for (let i = 0; i < this.layers.length - 1; i++)
         this.layers[i].connectTo(this.layers[i + 1], arg.layers[i]);
     }
     // If loading from array of layers
@@ -127,7 +127,7 @@ class NeuralNetwork {
   }
 
   // Creates a promise that is resolved after file is selected
-  // To access the neural network created use: 
+  // To access the neural network created use:
   // let nn;
   // NeuralNetwork.load().then(function(result) {nn = result});
   static load() {
