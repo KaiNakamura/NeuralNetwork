@@ -57,7 +57,7 @@ class NeuralNetwork {
       if (key == 'ID') {
         return undefined;
       }
-      if (key == 'state') {
+      else if (key == 'state') {
         return undefined;
       }
       else if (key == 'input' || key == 'output') {
